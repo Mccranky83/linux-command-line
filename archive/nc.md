@@ -8,4 +8,6 @@
 
 ```bash
 nc -l -p 5000 -v
+
+# 'l' for 'listen', 'v' for 'verbose'
 ```

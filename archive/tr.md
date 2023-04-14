@@ -57,6 +57,22 @@ echo 'me yogurt' | tr --delete "eogurt' '"
 > **_04_**
 
 ```bash
+echo foo | tr --complement o x
+# xooxbandit0@bandit:~$
+
+# Essentially this does the opposite of 'tr o x', and changes everything that's NOT an 'o' to a 'x', including the newline character, which is why the output comes out on the same line as the new prompt.
+```
+
+---
+
+```bash
+echo foobar | tr --complement fr x
+# fxxxxrxbandit0@bandit:~$
+```
+
+> **_Extra_**
+
+```bash
 cat /usr/bin/tail | tr --complement [:graph:] ' ' | tr --squeeze-repeats ' '
 
 # This transforms every non-readable character into a space char, then squeezes the blanks spaces to make it more readable.
